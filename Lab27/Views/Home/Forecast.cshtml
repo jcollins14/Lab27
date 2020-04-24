@@ -1,0 +1,17 @@
+﻿@model Lab27.Models.WeatherArray
+
+@{
+    ViewData["Title"] = "View";
+}
+
+<h1>2 Week Forecast</h1>
+<h2>@Model.ProductionCenter</h2>
+
+@{ 
+    for (int i = 0; i < 14; i++)
+    {
+        <p>@Model.Time.startPeriodName[i] (@Model.Time.startValidTime[i]): @Model.Data.text[i]</p>
+        <br />
+    }
+}
+
